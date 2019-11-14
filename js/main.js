@@ -7,10 +7,7 @@ function assignClickHandler () {
       window.alert('Incorrect year: ' + startYear)
       return
     }
-    
-  })
-  document.getElementbyId('loadData').addEventListener('click', function () {
-   const fullName = document.getElementById('fullName').value
+    const fullName = document.getElementById('fullName').value
     const major = document.getElementById('major').value
 
     const date = new Date()
@@ -24,10 +21,12 @@ function assignClickHandler () {
 
     enteredRecords.appendChild(newChild)
 
-    document.getElementById('inputs').reset() 
+    document.getElementById('inputs').reset()
     
   })
+  
 }
+  
 
   
   
