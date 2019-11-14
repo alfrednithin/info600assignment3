@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', assignClickHandler)
 
 function assignClickHandler () {
-  document.getElementById('addRec').addEventListener('click', function ()                                             
-   {
+  document.getElementById('addRec').addEventListener('click', function () {
     const startYear = document.getElementById('startYear').value
     if (startYear <= 2000) {
       window.alert('Incorrect year: ' + startYear)
       return
     }
-    const fullName = document.getElementById('fullName').value
+    
+  })
+  document.getElementbyId('loadData').addEventListener('click', function () {
+   const fullName = document.getElementById('fullName').value
     const major = document.getElementById('major').value
 
     const date = new Date()
@@ -22,7 +24,10 @@ function assignClickHandler () {
 
     enteredRecords.appendChild(newChild)
 
-    document.getElementById('inputs').reset()
+    document.getElementById('inputs').reset() 
+    
   })
 }
-document.getElementbyId('loadData').addEventListener('click',
+
+  
+  
