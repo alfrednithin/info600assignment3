@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', assignClickHandler)
 
 function assignClickHandler () {
-  document.getElementById('addRec').addEventListener('click', function () {
+  document.getElementById('addRec').addEventListener('click', function ()                                             
+   {
     const startYear = document.getElementById('startYear').value
     if (startYear <= 2000) {
       window.alert('Incorrect year: ' + startYear)
@@ -24,3 +25,4 @@ function assignClickHandler () {
     document.getElementById('inputs').reset()
   })
 }
+document.getElementbyId('loadData').addEventListener('click',
