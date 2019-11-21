@@ -51,8 +51,25 @@
       
       
       
+    
+function onLoad(){
+
+      document.getElementById("showData").innerHTML = " ";
+      $.getJSON("/users", function(result){
+      $.each(result, function(i, field){
+       for(var j=0; j<field.length; j++){
+
+        $("#showData").append(field[j].fullName + " , " + field[j].major + " ,  " + field[j].startYear + "<button value='" + field[j].id + "' id ='deleteData'>Delete</button>" + "<br>" );
+        console.log(field[j].id);
+
+         }
       
-  $(document).on("click","#deleteData",function(){
+      });
+    });
+    }
+
+
+    $(document).on("click","#deleteData",function(){
 
      const id= $(this).val(); 
     console.log(id);
@@ -73,26 +90,3 @@
       onLoad();
 
       });
-      
-      
-      
-    
-function onLoad(){
-
-      document.getElementById("showData").innerHTML = " ";
-      $.getJSON("/users", function(result){
-      $.each(result, function(i, field){
-       for(var j=0; j<field.length; j++){
-
-        $("#showData").append(field[j].fullName + " , " + field[j].major + " ,  " + field[j].startYear + "<button value='" + field[j].id + "' id ='deleteData'>Delete</button>" + "<br>" );
-        console.log(field[j].id);
-
-         }
-      
-      });
-    });
-    }
-         
-      
-      
-  
