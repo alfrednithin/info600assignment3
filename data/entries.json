@@ -11,6 +11,12 @@
             "id": "42",
             "major": "Computer Science",
             "startYear": 2012
+        },
+        {
+            "fullName": "Alfred",
+            "id": "2e17db",
+            "major": "IS",
+            "startYear": 2019
         }
     ]
 }
